@@ -16,6 +16,11 @@ type BaseModel struct {
     Version     int    `json:"version"`
 }
 
+type Model interface {
+    IndexName() string // Each model must specify its OpenSearch index name
+    ID() string        // Each model must provide a unique ID
+}
+
 // PrepareForSave updates the default fields before saving
 func (b *BaseModel) PrepareForSave(isNew bool) {
     now := time.Now().Format(time.RFC3339)
