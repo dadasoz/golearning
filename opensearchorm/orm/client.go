@@ -19,7 +19,7 @@ func InitializeClient(address string) error {
 		cfg := opensearch.Config{
 			Addresses: []string{address},
 			Username:  "admin",
-			Password:  "Dadaso@321***",
+			Password:  "",
 		}
 		clientInstance, err = opensearch.NewClient(cfg)
 		if err != nil {

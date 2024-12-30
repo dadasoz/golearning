@@ -34,7 +34,7 @@ func main() {
 	}
 
 	for _, u := range users {
-		fmt.Println(u)
+		fmt.Println(u.IDField, u.Email, u.Name)
 	}
 
 }
